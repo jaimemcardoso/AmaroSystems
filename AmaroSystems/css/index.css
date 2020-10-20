@@ -1,0 +1,341 @@
+@import url(//db.onlinewebfonts.com/c/1c8b876ce4910bf5cee6a5d7363544fc?family=Nud+Motoya+Maru);
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@font-face {font-family: "Nud Motoya Maru"; src: url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.eot"); src: url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.woff") format("woff"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.svg#Nud Motoya Maru") format("svg"); }
+
+body {
+    font-family: "Nud Motoya Maru";
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+html {
+  height: 100%
+}
+body{
+  background: white;
+}
+
+@media screen and (max-width:1463px) {
+  .banner {
+    display: none;
+  }
+
+}
+
+/*
+NAV ------------------------------------
+*/
+.push{
+  padding:50px;
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 2;
+  color: #3C3762;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  line-height: 80px;
+  padding-left: 60px;
+}
+
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav img {
+  width: 150px;
+  padding-top: 20px;
+}
+nav ul li{
+  display: inline-block;
+  background: white;
+  margin: 0 5px;
+  font-family: "Varela Round";
+
+}
+nav ul li a{
+  color: #3C3762;
+  line-height: 100px;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: gray;
+  border-radius: 5px;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid gray;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 80px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  
+}
+nav ul ul li a{
+  line-height: 50px;
+  font-size: 12px;
+
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+@media screen and (max-width:764px) {
+  nav ul li a{
+    color:#3C3762;
+    line-height: 70px;
+  }
+
+}
+
+@media all and (max-width: 975px) {
+
+  nav ul{
+    z-index: 5;
+
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, nav ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    z-index: 5;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: black;
+    font-size: 1rem;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+    
+  }
+  .show:hover{
+    color: gray;
+  }
+  .show a {
+    padding-left: -10px;
+  }
+  .icon{
+    display: block;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav {
+    z-index: 5;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+    z-index: 5;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+    z-index: 5;
+
+  }
+  
+  nav ul ul ul li{
+    position: static;
+    z-index: 5;
+
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+    z-index: 3;
+
+  }
+  [id^=btn]:checked + nav {
+    z-index: 5;
+  }
+  
+ 
+ 
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+  .tile p {
+    z-index: 0;
+    
+  }
+  .show img {
+    width: 20px;
+    vertical-align: -5px;
+  }
+}
+
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.test{
+  color:red;
+  font-size: 20px;
+}
+.banner {
+  position: relative;
+  padding-left: 30px;
+  top:20px;
+}
+.blackLetter {
+  color: black;
+}
+
+.choices li a {
+  font-size: 12px;
+
+}
+.logo p{
+    font-family: "Nud Motoya Maru";
+    font-size: 25px;
+}
+.Login {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #F77804;
+    color: white;
+}
+.Login:hover {
+    transition: background-color 0.6s ease;
+    background-color: #ffa653;
+}
+.logo img {
+    width: 43px;
+    vertical-align: -15px;
+    
+}
+.text {
+    position: relative;
+    bottom: -2px;
+}
+
+/*
+BANNER ------------------------------------
+*/
+
+.background-image{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-image: url('/img/Front.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    filter: brightness(50%);
+    z-index: 0;
+  }
+  #wrapper {
+    z-index: 5;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner {
+    z-index: 4;
+    flex:column;
+    text-align:center;  
+  }
+ 
+  .contact { 
+
+    padding: 10px 40px; 
+    text-align: center; 
+    color: white; 
+    background-color: #F77804; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    border:none; }
+    .inner p {
+        color: white;
+        z-index: 2;
+        padding-bottom: 40px;
+
+    }
