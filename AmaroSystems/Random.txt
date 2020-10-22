@@ -8,3 +8,8 @@ https://www.onlinewebfonts.com/download/0ce7990317b864855baf0b48d9afe6fa
 
 
 #3C3762
+#F6F3F3
+http://127.0.0.1:5500/index.html
+
+
+

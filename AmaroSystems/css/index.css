@@ -1,10 +1,8 @@
-@import url(//db.onlinewebfonts.com/c/1c8b876ce4910bf5cee6a5d7363544fc?family=Nud+Motoya+Maru);
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-@font-face {font-family: "Nud Motoya Maru"; src: url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.eot"); src: url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.woff") format("woff"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1c8b876ce4910bf5cee6a5d7363544fc.svg#Nud Motoya Maru") format("svg"); }
 
 body {
-    font-family: "Nud Motoya Maru";
+    font-family: "Varela Round";
 }
 
 
@@ -35,7 +33,9 @@ NAV ------------------------------------
 .push{
   padding:50px;
 }
-
+.up {
+    margin-top: -350px;
+}
 nav{
   width: 100%;
   position: fixed;
@@ -89,7 +89,7 @@ nav ul ul li a:hover{
 nav ul ul{
   position: absolute;
   top: 90px;
-  border-top: 3px solid gray;
+  border-top: 3px solid #3C3762;
   opacity: 0;
   visibility: hidden;
   transition: top .3s;
@@ -115,6 +115,7 @@ nav ul ul li{
 nav ul ul li a{
   line-height: 50px;
   font-size: 12px;
+  z-index: 3;
 
 }
 nav ul ul ul li{
@@ -269,8 +270,8 @@ p{
 
 }
 .logo p{
-    font-family: "Nud Motoya Maru";
     font-size: 25px;
+    font-weight: bold;
 }
 .Login {
     padding: 10px 20px;
@@ -298,10 +299,10 @@ BANNER ------------------------------------
 */
 
 .background-image{
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
-    background-image: url('/img/Front.png');
+    background-image: url('/img/Front 1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -317,9 +318,11 @@ BANNER ------------------------------------
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #F6F3F3
+    ;
   }
   .inner {
-    z-index: 4;
+    z-index: 1;
     flex:column;
     text-align:center;  
   }
@@ -332,10 +335,209 @@ BANNER ------------------------------------
     background-color: #F77804; 
     cursor: pointer; 
     border-radius: 5px; 
-    border:none; }
+    border:none; 
+    margin-top: -30px
+}
+
+
     .inner p {
         color: white;
         z-index: 2;
         padding-bottom: 40px;
 
     }
+
+
+    /*
+3 boxes------------------------------------
+*/
+
+.boxes {
+    color : #3C3762;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #F6F3F3
+    ;
+
+
+
+}
+.boxes ul {
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    padding: 20px 0px;
+    margin-top: -70px;
+
+}
+.boxes ul li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    padding-top: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+    width:300px;
+    
+
+    
+    
+}
+
+.boxes h1 {
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.boxes p {
+    font-weight: lighter;
+    font-size: 13px;
+    font-family: "Varela Round";
+    padding-bottom: 20px;
+}
+.box1 {border-bottom: 2px solid #F77804;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+.box2{border-bottom: 2px solid #3C3762;
+}
+.box3{border-bottom: 2px solid mediumturquoise;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+  
+
+@media screen and (max-width:  886px) {
+    .boxes {
+         padding-top: 20px;
+    }
+    .boxes ul {
+        list-style-type: none;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        bottom: 50px;
+        padding: 20px 0px;
+        display: block;
+    }
+    .boxes ul li {
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #ffffff;
+        padding-top: 20px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+        width:100%
+        
+        
+    }
+    
+
+    .box1 {border-bottom: 2px solid #F77804;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .box2{border-bottom: 2px solid #3C3762;
+    }
+    .box3{border-bottom: 2px solid mediumturquoise;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+
+    .boxes h1 {
+        font-weight: bold;
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .boxes p {
+        font-weight: lighter;
+        font-size: 11px;
+        font-family: "Varela Round";
+        padding-bottom: 20px;
+    }
+    
+}
+    /*
+Services------------------------------------
+*/
+
+
+.services {
+  margin-top: -100px;
+  background-image: url(/img/Middle\ Front\ \ \(1\)-min.png);
+  background-attachment: scroll;
+  background-position: top;
+  background-position-x: -20px;
+  background-position-y:-50px;
+  background-size: 1300px;
+  background-repeat: no-repeat;
+  background-color: #F6F3F3;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom:150px;
+}
+.left-Text {
+  width: 50%;
+  float: left;
+  position: relative;
+  top: 250px;
+  left: 300px;
+  max-width: 250px;
+}
+
+.left-Text p {
+  font-size: 15px;
+}
+.title {
+  font-weight: bold;
+}
+.right-text{
+  width: 50%;
+  float: left;
+
+}
+  
+.itemTitle {
+  font-size: 25px;
+}
+.desc {
+  font-size: 15px;
+}
+
+.grid1 li {
+  max-width: 250px;
+
+
+}
+
+
+
+
+  @media screen and (max-width:600px) {
+
+    .services{
+      background-image: none;
+      background-position-x: -200px;
+
+    }
+  }
+
+.double-pics {
+
+  width: 100%;
+}
+.double-pics ul li {
+  display: inline-block;
+}
